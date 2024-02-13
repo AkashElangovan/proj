@@ -20,3 +20,33 @@ The SM2 algorithm is a spaced repetition algorithm that determines the optimal i
 
 ## Spaced Repetition
 Spaced repetition is a learning technique that involves reviewing information at increasing intervals over time. This method is proven to enhance long-term retention and is implemented in this app through the SM2 algorithm. The algorithm adjusts the review intervals based on the user's accuracy, ensuring that cards are revisited at the optimal time for effective learning.
+# SM-2 Algorithm Summary
+
+## Inputs
+1. **Quality (0-5):** Memory recall difficulty.
+2. **Repetitions:** Number of prior reviews.
+3. **Previous Ease Factor:** Floating-point factor (≥ 1.3).
+4. **Previous Interval:** Days between previous reviews.
+
+## Outputs
+1. **Interval:** Days until the next review.
+2. **Repetitions:** Number of reviews.
+3. **Ease Factor:** Adjusted for recall quality.
+
+## Steps
+1. **If quality ≥ 3:**
+   - Set interval based on repetitions.
+   - Increment repetitions.
+   - Adjust ease factor.
+
+2. **If quality < 3:**
+   - Reset repetitions and interval.
+   - Maintain ease factor.
+
+3. **Ensure ease factor ≥ 1.3.**
+
+4. **Return interval, repetitions, and ease factor.**
+
+## Ease Factor Formula
+```plaintext
+previous ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
