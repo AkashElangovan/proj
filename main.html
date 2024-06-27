@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="flashcard" id="flashcard">
+            <div class="question" id="question">Question</div>
+            <div class="answer" id="answer">Answer</div>
+        </div>
+        <button id="show-answer">Show Answer</button>
+        <div class="ratings">
+            <button class="rate-btn" data-rating="1">Hard</button>
+            <button class="rate-btn" data-rating="2">Medium</button>
+            <button class="rate-btn" data-rating="3">Easy</button>
+        </div>
+        <div class="stats">
+            <p>Ease Factor: <span id="ease-factor">N/A</span></p>
+            <p>Repetitions: <span id="repetitions">N/A</span></p>
+            <p>Interval: <span id="interval">N/A</span></p>
+            <p>Next Review Date: <span id="next-review-date">N/A</span></p>
+        </div>
+    </div>
+    <div class="add-card">
+        <h2>Add a New Card</h2>
+        <input type="text" id="new-question" placeholder="Question">
+        <input type="text" id="new-answer" placeholder="Answer">
+        <button id="add-card">Add Card</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
