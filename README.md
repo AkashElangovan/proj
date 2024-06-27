@@ -1,8 +1,8 @@
-# MERN Flash Card App with SM2 Algorithm
+#  Flash Card App with SM2 Algorithm
 
 ## Overview
 
-This MERN (MongoDB, Express.js, React.js, Node.js) web application is a simple flash card app that utilizes the SM2 algorithm for spaced repetition. The SM2 algorithm is a widely used algorithm for optimizing the timing of reviewing flashcards, ensuring efficient and effective learning.
+This web application is a simple flash card app that utilizes the SM2 algorithm for spaced repetition. The SM2 algorithm is a widely used algorithm for optimizing the timing of reviewing flashcards, ensuring efficient and effective learning.
 
 ## Features
 
