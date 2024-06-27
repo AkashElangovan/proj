@@ -9,12 +9,7 @@ This web application is a simple flash card app that utilizes the SM2 algorithm 
 - **Flash Card Creation**: Users can create flash cards with questions and answers.
 - **SM2 Algorithm**: The app implements the SM2 algorithm for spaced repetition to optimize the timing of flash card reviews.
 
-## Technologies Used
 
-- **MongoDB**: NoSQL database for storing flash cards and user data.
-- **Express.js**: Backend framework for handling server-side logic.
-- **React.js**: Frontend library for building user interfaces.
-- **Node.js**: JavaScript runtime for server-side development.
 ## SM2 Algorithm
 The SM2 algorithm is a spaced repetition algorithm that determines the optimal intervals for reviewing flash cards based on the user's performance. It uses a formula to calculate the next review date for each flash card, ensuring that cards are reviewed at increasing intervals as the user demonstrates proficiency.
 
