@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard App</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="flashcard" id="flashcard">
-            <div class="question" id="question">Question</div>
-            <div class="answer" id="answer">Answer</div>
+<body class="bg-gray-100 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8 text-indigo-600">Flashcard App</h1>
+        
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-8">
+            <div class="p-8">
+                <div class="flashcard bg-gray-50 p-6 rounded-lg shadow-inner mb-4 min-h-[200px] flex items-center justify-center" id="flashcard">
+                    <div class="question text-xl font-semibold text-center" id="question">Question</div>
+                    <div class="answer text-xl font-semibold text-center hidden" id="answer">Answer</div>
+                </div>
+                <button id="show-answer" class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300 mb-4">Show Answer</button>
+                <div class="ratings flex justify-between gap-2 mb-4">
+                    <button class="rate-btn flex-1 bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-300" data-rating="1">Hard</button>
+                    <button class="rate-btn flex-1 bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-300" data-rating="2">Medium</button>
+                    <button class="rate-btn flex-1 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-300" data-rating="3">Easy</button>
+                </div>
+                <div class="stats bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Card Statistics</h3>
+                    <p class="text-sm text-gray-600">Ease Factor: <span id="ease-factor" class="font-medium">N/A</span></p>
+                    <p class="text-sm text-gray-600">Repetitions: <span id="repetitions" class="font-medium">N/A</span></p>
+                    <p class="text-sm text-gray-600">Interval: <span id="interval" class="font-medium">N/A</span></p>
+                    <p class="text-sm text-gray-600">Next Review Date: <span id="next-review-date" class="font-medium">N/A</span></p>
+                </div>
+            </div>
         </div>
-        <button id="show-answer">Show Answer</button>
-        <div class="ratings">
-            <button class="rate-btn" data-rating="1">Hard</button>
-            <button class="rate-btn" data-rating="2">Medium</button>
-            <button class="rate-btn" data-rating="3">Easy</button>
+        
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold mb-4 text-indigo-600">Add a New Card</h2>
+                <input type="text" id="new-question" placeholder="Question" class="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="text" id="new-answer" placeholder="Answer" class="w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button id="add-card" class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300">Add Card</button>
+            </div>
         </div>
-        <div class="stats">
-            <p>Ease Factor: <span id="ease-factor">N/A</span></p>
-            <p>Repetitions: <span id="repetitions">N/A</span></p>
-            <p>Interval: <span id="interval">N/A</span></p>
-            <p>Next Review Date: <span id="next-review-date">N/A</span></p>
-        </div>
-    </div>
-    <div class="add-card">
-        <h2>Add a New Card</h2>
-        <input type="text" id="new-question" placeholder="Question">
-        <input type="text" id="new-answer" placeholder="Answer">
-        <button id="add-card">Add Card</button>
     </div>
     <script src="script.js"></script>
 </body>
