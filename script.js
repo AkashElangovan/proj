@@ -1,6 +1,6 @@
 let flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 let currentIndex = 0;
-//dec
+
 const questionElement = document.getElementById('question');
 const answerElement = document.getElementById('answer');
 const showAnswerButton = document.getElementById('show-answer');
