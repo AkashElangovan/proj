@@ -12,8 +12,9 @@
         
         <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-8">
             <div class="p-8">
-                <div class="flashcard bg-gray-50 p-6 rounded-lg shadow-inner mb-4 min-h-[200px] flex items-center justify-center" id="flashcard">
-                    <div class="question text-xl font-semibold text-center" id="question">Question</div>
+                <div class="flashcard bg-gray-50 p-6 rounded-lg shadow-inner mb-4 min-h-[200px] flex flex-col items-center justify-center" id="flashcard">
+                    <!-- Adding mb-4 for space between the question and the answer -->
+                    <div class="question text-xl font-semibold text-center mb-4" id="question">Question</div>
                     <div class="answer text-xl font-semibold text-center hidden" id="answer">Answer</div>
                 </div>
                 <button id="show-answer" class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300 mb-4">Show Answer</button>
