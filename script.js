@@ -1,6 +1,6 @@
 let flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
 let currentIndex = 0;
-//
+
 const questionElement = document.getElementById('question');
 const answerElement = document.getElementById('answer');
 const showAnswerButton = document.getElementById('show-answer');
@@ -66,6 +66,7 @@ function updateCardPerformance(index, rating) {
 
 showAnswerButton.addEventListener('click', () => {
     answerElement.style.display = 'block';
+    questionElement.style.marginBottom = '20px'; // Add space between question and answer
 });
 
 rateButtons.forEach(button => {
