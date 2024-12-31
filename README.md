@@ -1,45 +1,82 @@
 #  Flash Card App with SM2 Algorithm
 ### LINK
 https://akashelangovan.github.io/flashcard-webapp/
-## Overview
 
-This web application is a simple flash card app that utilizes the SM2 algorithm for spaced repetition. The SM2 algorithm is a widely used algorithm for optimizing the timing of reviewing flashcards, ensuring efficient and effective learning.
+<div align="center">
+
+# Flashcard Web App with SM2 Algorithm
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/AkashElangovan/flashcard-webapp)
+[![License Badge](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/AkashElangovan/flashcard-webapp/blob/main/LICENSE)
+</div>
+
+<br>
+
+This repository contains a simple web application for creating and reviewing flashcards using the SM2 spaced repetition algorithm. The app is designed to help users learn more efficiently by optimizing review times based on their performance.
 
 ## Features
 
-- **Flash Card Creation**: Users can create flash cards with questions and answers.
-- **SM2 Algorithm**: The app implements the SM2 algorithm for spaced repetition to optimize the timing of flash card reviews.
+-   **Flashcard Creation**: Easily add new flashcards with questions and answers.
+-   **Spaced Repetition**: Utilizes the SM2 algorithm to schedule flashcard reviews at optimal intervals.
+-   **Performance Tracking**: Tracks ease factor, repetitions, interval, and next review date for each card.
+-   **User-Friendly Interface**: Clean and intuitive design using HTML, CSS, and JavaScript.
+-   **Local Storage**: Saves all card data in the browser's local storage.
 
+## Table of Contents
 
-## SM2 Algorithm
-The SM2 algorithm is a spaced repetition algorithm that determines the optimal intervals for reviewing flash cards based on the user's performance. It uses a formula to calculate the next review date for each flash card, ensuring that cards are reviewed at increasing intervals as the user demonstrates proficiency.
+1.  [Installation](#installation)
+2.  [How to Run](#how-to-run)
+3.  [Dependencies](#dependencies)
+4.  [Contribution](#contribution)
+5.  [License](#license)
+6.  [Contact](#contact)
 
-## Spaced Repetition
-Spaced repetition is a learning technique that involves reviewing information at increasing intervals over time. This method is proven to enhance long-term retention and is implemented in this app through the SM2 algorithm. The algorithm adjusts the review intervals based on the user's accuracy, ensuring that cards are revisited at the optimal time for effective learning.
-# SM-2 Algorithm Summary
+## Installation
 
-## Inputs
-1. **Quality (0-5):** Memory recall difficulty.
-2. **Repetitions:** Number of prior reviews.
-3. **Previous Ease Factor:** Floating-point factor (≥ 1.3).
-4. **Previous Interval:** Days between previous reviews.
+To set up the flashcard app, clone this repository to your local machine:
 
-## Outputs
-1. **Interval:** Days until the next review.
-2. **Repetitions:** Number of reviews.
-3. **Ease Factor:** Adjusted for recall quality.
+```bash
+git clone https://github.com/AkashElangovan/flashcard-webapp.git
+cd flashcard-webapp
+```
 
-## Steps
-1. **If quality ≥ 3:**
-   - Set interval based on repetitions.
-   - Increment repetitions.
-   - Adjust ease factor.
+## How to Run
 
-2. **If quality < 3:**
-   - Reset repetitions and interval.
-   - Maintain ease factor.
+Open the `index.html` file directly in your web browser. No server is required as the app is client-side and uses local storage.
 
-3. **Ensure ease factor ≥ 1.3.**
+## Dependencies
+
+The project relies on the following dependencies:
+
+*   **HTML**: Used for structuring the web page.
+*   **CSS**: Styling the user interface with basic styles.
+*   **JavaScript**: Logic for the flashcard application and the SM2 algorithm.
+*   **Tailwind CSS**: Used for basic styling and layouts (loaded via CDN).
+*   **Local Storage**: Used to save flashcards and card data in the browser.
+
+## Contribution
+
+Contributions are welcome! To contribute to this project:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them.
+4.  Push your changes to your fork.
+5.  Create a pull request to the main repository.
+
+Please ensure your code adheres to the project's coding conventions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please contact:
+
+*   **Maintainer**: Akash Elangovan
+*   **Email**: [placeholder@email.com](mailto:placeholder@email.com)
+
 
 4. **Return interval, repetitions, and ease factor.**
 
