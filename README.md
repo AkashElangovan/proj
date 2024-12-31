@@ -2,6 +2,7 @@
 ### LINK
 https://akashelangovan.github.io/flashcard-webapp/
 
+
 <div align="center">
 
 # Flashcard Web App with SM2 Algorithm
@@ -76,10 +77,3 @@ For questions or feedback, please contact:
 
 *   **Maintainer**: Akash Elangovan
 *   **Email**: [placeholder@email.com](mailto:placeholder@email.com)
-
-
-4. **Return interval, repetitions, and ease factor.**
-
-## Ease Factor Formula
-```plaintext
-previous ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
